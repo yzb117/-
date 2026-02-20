@@ -34,6 +34,16 @@ allList.forEach(item=>{
         item.classList.add('active');
     })
 })
+// 搜索框
+const search=document.querySelector('.header_search')
+const search_nav=document.querySelector('.search_nav')
+search.addEventListener('click',()=>{
+    search_nav.style.display='block'
+})
+search_nav.addEventListener('mouseleave',()=>{
+    search_nav.style.display='none'
+})
+
 // 歌单footer变化
 const slider_container = document.querySelectorAll('.wrapper .slider .slider_container');
 slider_container.forEach(item=>{
@@ -209,9 +219,34 @@ allList.forEach(item=>{
     item.addEventListener('click',()=>{
     let n = item.dataset.id;
     wrapper.forEach(item=>{
-        item.style.display='none';
+        item.classList.remove('active');
     })
-    wrapper[n].style.display='flex';
+    wrapper[n].classList.add('active');
+    })
+})
+// 两个nav
+const wrapper2_nav=document.querySelectorAll('.wrapper2_nav li')
+const wrapper2_nav2=document.querySelectorAll('.wrapper2_nav2 a')
+wrapper2_nav.forEach(item=>{
+    item.addEventListener('click',(e)=>{
+        e.preventDefault;
+        wrapper2_nav.forEach(item=>{
+            item.classList.remove('active');
+            
+        });
+        
+        item.classList.add('active');
+    })
+})
+wrapper2_nav2.forEach(item=>{
+    item.addEventListener('click',(e)=>{
+        e.preventDefault;
+        wrapper2_nav2.forEach(item=>{
+            item.classList.remove('active');
+           
+        });
+        
+        item.classList.add('active');
     })
 })
 
@@ -220,6 +255,72 @@ allList.forEach(item=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 歌曲
+function getSong(keywords){
+    return fetch(`http://localhost:3000/search?keywords=${keywords}`)
+    .then(res=>res.json())
+    .then(res=>localStorage.setItem(`${keywords}`,JSON.stringify(res)))
+    .catch(err=>{
+    console.error(err);
+    });
+}
+const song='海阔天空'
+getSong(song)
+.then(()=>{
+console.log(localStorage.getItem('海阔天空'))
+})
+async function playSong(songId) {
+  try {
+    const res = await fetch(`http://localhost:3000/song/url?id=${songId}`);
+    const data = await res.json();
+
+    // 检查 data 数组是否存在且不为空
+    if (data.data && data.data.length > 0) {
+      const playUrl = data.data[0].url;
+      if (playUrl) {
+        const audio = new Audio(playUrl);
+        
+
+        audio.play();
+        console.log('正在播放:', playUrl);
+      } else {
+        console.log('无播放链接');
+      }
+    } 
+  } catch (err) {
+    console.error('播放失败:', err);
+  }
+}
+const text = document.querySelector('.slider .slider_container:nth-child(1)')
+text.addEventListener('click',()=>{
+    playSong(1357375695)
+})
+async function getPlayUrl(songId) {
+  try {
+    const res = await fetch(`http://localhost:3000/song/url?id=${songId}`);
+    const data = await res.json();
+    console.log('播放链接:', data);
+    return data;
+  } catch (err) {
+    console.error('获取播放链接失败:', err);
+  }
+}
 
 
 
