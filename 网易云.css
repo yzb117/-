@@ -705,21 +705,112 @@ body{
 .wrapper2_slider2 .single:nth-child(6) .footer{
     background-color: #acac9c;
 }
+/* 底部播放列表 */
+.playList{
+    position: fixed;
+    top: calc(100% - 0.8rem);
+    width: 100%;
+    height: 0.8rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+@keyframes range{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.playList img{
+    position: absolute;
+    left: 0.12rem;
+    width: 0.64rem;
+    height: 0.64rem;
+    border-radius: 50%;
+    animation: range 8s linear infinite;
+}
+.playList .songinfo{
+    position: absolute;
+    left: 0.8rem;
+}
+.playList .songinfo p:first-child{
+    color: #555860;
+}
+.playList .songinfo p:nth-child(2){
+    color: #9a9fa9;
+}
+.byTurn{
+    position: absolute;
+    left: 7.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1.2rem;
+    height: 100%;
+}
+.byTurn a{
+    display: block;
+    font-size: 0.25rem;
+    color: #535b6d;
+}
+#stop{
+    color: white;
+    display: flex;
+    width: 0.4rem;
+    height: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+}
+#stop::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    
+    z-index: -1;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: #fc3d49;
+}
+/* 歌单里面的样式 */
+.songList_wrapperImg{
+    position: absolute;
+    left: 0.36rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 0.1rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.songList_wrapperP{
+    position: absolute;
+    left: 2.34rem;
+    font-size: 0.2rem;
+    font-weight: bold;
+}
+.songList_wrapperUl{
+    position: absolute;
+    left: 0.36rem;
+    top: 3rem;
+    width: 12.5rem;
+    
+}
+.songList_wrapperUl li{
+    height: 0.6rem;
+    border-radius: 0.08rem;
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+.songList_wrapperUl li p{
+    padding-left: 0.02rem;
+}
+.songList_wrapperUl li:hover{
+    cursor: pointer;
+}
+.songList_wrapperUl li.active{
+    background-color: #fff;
+}
 
 
 

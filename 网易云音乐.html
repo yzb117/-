@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./网易云.css">
-    <link rel="stylesheet" href="./网易云音乐图标/font_5124035_sixms5fd5a8/iconfont.css">
+    <link rel="stylesheet" href="./网易云音乐图标/font_5124035_yjcwr75r9nf/iconfont.css">
 
 </head>
 <body>
@@ -50,21 +50,21 @@
         <button class="iconfont icon-voicefill" id="speak"></button>
         
             <ul class="search_nav">
-                <li><a href="#">热搜榜</a></li>
-                <li>1 <a href="#">心墙</a></li>
-                <li>2<a href="#">飞云之下</a></li>
-                <li>3<a href="#">交换余生</a></li>
-                <li>4<a href="#">路过人间</a></li>
-                <li>5<a href="#">句号</a></li>
-                <li>6<a href="#">特别的人</a></li>
-                <li>7<a href="#">晴天</a></li>
-                <li>8<a href="#">再见</a></li>
-                <li>9<a href="#">不能说的秘密</a></li>
-                <li>10<a href="#">我怀念的</a></li>
-                <li>11<a href="#">如果可以</a></li>
-                <li>12<a href="#">倒数</a></li>
-                <li>13<a href="#">园游会</a></li>
-                <li>14<a href="#">七里香</a></li>
+                <li><a href="#" class="song">热搜榜</a></li>
+                <li>1 <a href="#" class="song">心墙</a></li>
+                <li>2<a href="#" class="song">飞云之下</a></li>
+                <li>3<a href="#" class="song">交换余生</a></li>
+                <li>4<a href="#" class="song">路过人间</a></li>
+                <li>5<a href="#" class="song">句号</a></li>
+                <li>6<a href="#" class="song">特别的人</a></li>
+                <li>7<a href="#" class="song">晴天</a></li>
+                <li>8<a href="#" class="song">再见</a></li>
+                <li>9<a href="#" class="song">不能说的秘密</a></li>
+                <li>10<a href="#" class="song">我怀念的</a></li>
+                <li>11<a href="#" class="song">如果可以</a></li>
+                <li>12<a href="#" class="song">倒数</a></li>
+                <li>13<a href="#" class="song">园游会</a></li>
+                <li>14<a href="#" class="song">七里香</a></li>
             </ul>
         
         <!-- 头像信息 -->
@@ -84,6 +84,19 @@
             </div>
           </div>
         </div>
+        <!-- 底部播放列表 -->
+         <div class="playList">
+            <img src="" alt="">
+            <div class="songinfo">
+                <p></p>
+                <p></p>
+            </div>
+            <div class="byTurn">
+                <a href="#" id="before" class="iconfont icon-backwardfill"></a>
+                <a href="#" id="stop" class="iconfont icon-stop"></a>
+                <a href="#" id="next" class="iconfont icon-play_forward_fill"></a>
+            </div>
+         </div>
     <div class="wrapper active">
         <!-- 歌单 -->
          <div class="slider">
@@ -234,70 +247,71 @@
             <a href="#">更多分类<p class="iconfont icon-RectangleCopy1"></p></a>
          </div>
          <div class="wrapper2_slider">
-           <div class="single">
+           <div class="single" data-id="13">
                 <img src="./网易云img/音乐广场 (9).jpg" alt="">
                 <p class="iconfont icon-erji ">8117万</p>
                 <div class="footer">林俊杰经典专辑</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="14">
                 <img src="./网易云img/音乐广场 (2).jpg" alt="">
                 <p class="iconfont icon-erji ">13.1万</p>
                 <div class="footer">【欧美】开车自驾必备，节奏感是天生的</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="15">
                 <img src="./网易云img/音乐广场 (3).jpg" alt="">
                 <p class="iconfont icon-erji ">45.2万</p>
                 <div class="footer">华语 | 90后回忆杀 经典电视剧主题曲</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="16">
                 <img src="./网易云img/音乐广场 (4).jpg" alt="">
                 <p class="iconfont icon-erji ">156万</p>
                 <div class="footer">那些被单曲循环无数次的歌</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="17">
                 <img src="./网易云img/音乐广场 (5).jpg" alt="">
                 <p class="iconfont icon-erji ">15.1万</p>
                 <div class="footer">【节奏福音】好听也好摇</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="18">
                 <img src="./网易云img/音乐广场 (6).jpg" alt="">
                 <p class="iconfont icon-erji ">18万</p>
                 <div class="footer">华语民谣 | 孤独的心诠释诗意和远方</div>
             </div>
          </div>
           <div class="wrapper2_slider2">
-           <div class="single">
+           <div class="single" data-id="19">
                 <img src="./网易云img/音乐广场 (7).jpg" alt="">
                 <p class="iconfont icon-erji ">15.1万</p>
                 <div class="footer">蹦迪车载 | 车窗摇下，声音调到最大</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="20">
                 <img src="./网易云img/音乐广场 (8).jpg" alt="">
                 <p class="iconfont icon-erji ">14万</p>
                 <div class="footer">打游戏必备BGM o.0</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="21">
                 <img src="./网易云img/音乐广场 (1).jpg" alt="">
                 <p class="iconfont icon-erji ">9856万</p>
                 <div class="footer">午夜引擎：城市霓虹下的电音独行</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="22">
                 <img src="./网易云img/音乐广场 (10).jpg" alt="">
                 <p class="iconfont icon-erji ">179万</p>
                 <div class="footer">深夜emo伤感 | 一个人一首歌不同的故事</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="23">
                 <img src="./网易云img/音乐广场 (11).jpg" alt="">
                 <p class="iconfont icon-erji ">11万</p>
                 <div class="footer">【失恋必听歌曲】你会突然听懂这些歌！</div>
             </div>
-            <div class="single">
+            <div class="single" data-id="24">
                 <img src="./网易云img/音乐广场 (12).jpg" alt="">
                 <p class="iconfont icon-erji ">99万</p>
                 <div class="footer">奏响一曲专属8090后的青春回忆</div>
             </div>
          </div>
     </div>
+
        
     <script src="./网易云.js"></script>
 </body>
